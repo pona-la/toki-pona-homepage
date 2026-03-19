@@ -1,107 +1,142 @@
 ---
 import Background from '../components/Background.astro';
+import Block from '../components/Block.astro';
+import Markdown from '../components/Markdown.astro';
+import Pitch from '../components/Pitch.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout>
-	<container>
-		<Background />
-		<pitch>
-			<h1>Toki Pona</h1>
-			<mockup-window>
-				<window-content>
-					<iframe
-						width='1280'
-						height='720'
-						src='https://www.youtube-nocookie.com/embed/U3GQePblz4M'
-						title='What is the easiest language?'
-						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-						referrerpolicy='strict-origin-when-cross-origin'
-						allowfullscreen></iframe>
-				</window-content>
-			</mockup-window>
-		</pitch>
-		<description>
-			<h2>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-				magna aliqua.
-			</h2>
-		</description>
-	</container>
-</Layout>
-
 <style>
-	container {
+	:root {
+		--gap: 2rem;
+	}
+	.columns-3-2 {
 		display: grid;
-		position: absolute;
-		width: 100%;
-		min-height: calc(100% - 4rem);
 		grid-template-columns: 3fr 2fr;
-		grid-template-rows: 3fr 1fr;
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
-
-		div {
-			width: 100%;
-			height: 100%;
-		}
-
-		pitch {
-			grid-area: 1 / 1 / 2 / 2;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			padding: 3rem;
-			mockup-window {
-				width: 100%;
-				background-color: var(--background);
-				border: 3px solid var(--text);
-				border-radius: 1rem;
-				position: relative;
-				display: flex;
-				flex-direction: column;
-				overflow: hidden;
-				overflow-x: auto;
-				padding-top: 1.25rem;
-				&:before {
-					content: '';
-					margin-bottom: 1rem;
-					display: block;
-					aspect-ratio: 1 / 1;
-					height: 0.75rem;
-					flex-shrink: 0;
-					align-self: flex-start;
-					border-radius: calc(infinity * 1px);
-					opacity: 0.3;
-					box-shadow:
-						1.4em 0,
-						2.8em 0,
-						4.2em 0;
-				}
-				[dir='rtl'] &:before {
-					align-self: flex-end;
-				}
-
-				window-content {
-					border-top: 3px solid var(--text);
-					iframe {
-						width: 100%;
-						height: auto;
-						aspect-ratio: 16 / 9;
-					}
-				}
-			}
-		}
-		description {
-			grid-area: 1 / 2 / 2 / 3;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			padding: 3rem;
-		}
+		/*padding: var(--gap);*/
+		gap: var(--gap);
+	}
+	.columns-1-1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		/*padding: var(--gap);*/
+		gap: var(--gap);
+	}
+	.column {
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap);
+	}
+	input {
+		background-color: var(--background);
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 5px 10px;
+		text-align: center;
+		font-size: 150%;
+		margin: 5px;
 	}
 </style>
+
+<Layout>
+	<Background />
+	<div style='padding:var(--gap)'>
+		<div class='columns-3-2'>
+			<div class='column'>
+				<div id='what-is-toki-pona'><Pitch /></div>
+				<div class='columns-1-1'>
+					<Block>
+						<h2>Word of the day</h2>
+						<center><input type='text' value='suwi' /></center>
+						<br />
+						<p>sweet, fragrant; cute, adorable</p>
+						<p>
+							suwi describes pleasant aspects of senses. If something is pleasant to the mouth, i.e. it is sweet, that
+							is suwi. If something is pleasant to the eye, i.e. cute, that is suwi as well. The scent of apples might
+							be suwi as well. A soft or fuzzy texture can be suwi. A pleasant sound can be described as suwi. suwi can
+							also describe other pleasant things, such as actions or people. Like if someone bakes you a pie, not only
+							is the pie usually suwi, but so is the act of making it. Note that suwi isn't used for savory pleasant
+							flavors much, usually just sweet ones. -- lipamanka
+						</p>
+					</Block>
+					<Block>
+						<h2>How do you say...</h2>
+						<section>
+							<center><input type='text' value='follow' /></center>
+
+							<ol>
+								<li>
+									<span> 1.</span>
+
+									take the same route as another — <b> tawa sama, kute </b>
+									<ul>
+										<li>
+											<i>
+												sina o lawa e kulupu. mi <strong> tawa sama</strong>
+												sina.
+											</i>
+											<br />
+											You lead the group. I'll <strong> follow</strong>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span> 2.</span>
+
+									have a certain lifestyle or doctrine — <b> lon nasin ... </b>
+									<ul>
+										<li>
+											<i>
+												mi <strong> lon</strong>
+												nasin Pawaki.
+											</i>
+											<br />
+											I <strong> follow</strong>
+											the Baháʼí faith.
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span> 3.</span>
+
+									on social media, subscribe to someone's posts — <b> kute </b>
+									<ul>
+										<li>
+											<i>
+												sina <strong> kute ala kute</strong>
+												e toki ale mi?
+											</i>
+											<br />
+											Are you <strong> following</strong>
+											me?
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</section>
+					</Block>
+				</div>
+			</div>
+
+			<div class='column'>
+				<!-- <div id='faq'>FAQ</div> -->
+				<Block>
+					<h2>Communities</h2>
+					<Markdown path='index/communities' />
+				</Block>
+				<Block>
+					<h2>News</h2>
+					<Markdown path='index/news' />
+				</Block>
+				<Block>
+					<h2>Videos</h2>
+					<Markdown path='index/videos' />
+				</Block>
+				<Block>
+					<h2>Texts</h2>
+					<Markdown path='index/texts' />
+				</Block>
+			</div>
+		</div>
+	</div>
+</Layout>
