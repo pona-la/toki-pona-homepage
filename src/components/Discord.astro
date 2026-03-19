@@ -1,17 +1,18 @@
 ---
 interface Props {
 	name: string;
+	desc: string;
 	invite: string;
 	img: string;
 	members: string;
 }
-const { name, invite, img, members } = Astro.props;
+const { name, desc, invite, img, members } = Astro.props;
 ---
 
 <a href={invite}>
 	<img src={img} />
 	<div>
-		<strong>{name}</strong>
+		<strong>{name}</strong> · {desc}
 		<p>{members}</p>
 	</div>
 </a>
@@ -26,6 +27,7 @@ const { name, invite, img, members } = Astro.props;
 		font-weight: unset;
 		text-decoration: none;
 		margin-bottom: 1px;
+		color: #ccc;
 	}
 	img {
 		border-radius: 15px;
@@ -33,9 +35,6 @@ const { name, invite, img, members } = Astro.props;
 	}
 	strong {
 		color: #fff;
-	}
-	p {
-		color: #ccc;
 	}
 
 	p:before {
