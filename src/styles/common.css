@@ -31,8 +31,18 @@ blockquote {
 }
 
 main {
-	max-width: 900px;
+	max-width: 1600px;
 	margin: auto;
+	display: grid;
+	grid-template: "right left" / 3fr 2fr;
+	column-gap: 10px;
+}
+main > * {
+	align-self: start;
+}
+
+section {
+	margin-bottom: 20px;
 	border: 3px solid var(--orange);
 	border-radius: 10px;
 	padding: 10px;
@@ -80,11 +90,16 @@ summary {
 	cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) {
+	main {
+		display: block;
+	}
+}
 @media only screen and (max-width: 600px) {
 	body {
 		margin: 0;
 	}
-	main {
+	section {
 		border: none;
 		border-radius: none;
 		font-size: 90%;
