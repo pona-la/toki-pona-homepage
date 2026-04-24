@@ -1,0 +1,47 @@
+:root {
+	--font: "Andika", sans-serif;
+
+	--yellow-soft: #fff9f9;
+	--yellow-strong: #ffd13b;
+	--orange: #ffa454;
+	--red: #f26a6a;
+	--blue-strong: #4349ff;
+	--blue-soft: #bfc1ff;
+	--txt: #240000;
+}
+
+body {
+	margin: 1rem;
+	font-family: var(--font);
+	color: var(--txt);
+	line-height: 1.7em;
+	font-size: 18px;
+}
+
+* {
+	transition:
+		color 0.2s,
+		background-color 0.2s,
+		border 0.2s,
+		fill 0.2s,
+		box-shadow 0.2s;
+}
+
+main {
+	max-width: 800px;
+	margin: auto;
+	background-color: var(--yellow-soft);
+	border: 5px solid var(--yellow-strong);
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px;
+}
+
+h1 {
+	font-weight: initial;
+}
+
+svg {
+	max-width: 100%;
+	height: auto;
+}
