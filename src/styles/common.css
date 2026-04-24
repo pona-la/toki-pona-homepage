@@ -84,7 +84,7 @@ svg {
 
 details {
 	/*max-width: 600px;*/
-	margin-bottom: 10px;
+	margin-top: 20px;
 	background-color: var(--yellow);
 	border: 3px solid var(--orange);
 	border-radius: 10px;
