@@ -7,12 +7,15 @@ const { id } = Astro.props;
 
 <style>
 	.container {
+		box-sizing: border-box;
 		position: relative;
 		width: 100%;
 		padding-bottom: 56.25%;
 		overflow: hidden;
 		max-width: 1280px;
 		margin: 0 auto;
+		border: 5px solid var(--orange);
+		border-radius: 5px;
 	}
 
 	.container iframe {

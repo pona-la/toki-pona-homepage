@@ -2,6 +2,7 @@
 	--font: "Andika", sans-serif;
 
 	--yellow-soft: #fff9f9;
+	--yellow: #ffde72;
 	--yellow-strong: #ffd13b;
 	--orange: #ffa454;
 	--red: #f26a6a;
@@ -13,7 +14,7 @@
 body {
 	margin: 1rem;
 	font-family: var(--font);
-	background-color: var(--blue-soft);
+	background-color: var(--yellow);
 	color: var(--txt);
 	line-height: 1.4;
 	font-size: 18px;
@@ -31,28 +32,33 @@ body {
 blockquote {
 	width: fit-content;
 	text-align: left;
+	font-size: 110%;
 	margin: 0px;
 	padding-inline: 15px 15px;
 	border-inline-start: 5px solid var(--yellow-strong);
 }
 
 main {
-	max-width: 800px;
+	max-width: 900px;
 	margin: auto;
-	background-color: var(--yellow-soft);
-	border: 5px solid var(--yellow-strong);
+	border: 5px solid var(--orange);
 	border-radius: 5px;
-	text-align: center;
 	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: var(--yellow-soft);
+	text-align: center;
+	font-size: 18px;
 }
 
 h1 {
 	font-weight: initial;
-	font-size: 36px;
+	font-size: 180%;
 }
 h2 {
 	font-weight: initial;
-	font-size: 36px;
+	font-size: 150%;
 	width: 100%;
 	padding-bottom: 15px;
 	border-bottom: 5px solid var(--yellow-strong);
@@ -61,12 +67,14 @@ h2 {
 svg {
 	max-width: 100%;
 	height: auto;
+	margin: auto;
 }
 
 .cols {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 10px;
+	column-gap: 20px;
+	padding: 10px;
 }
 
 .cols * {
@@ -77,11 +85,32 @@ svg {
 details {
 	max-width: 600px;
 	margin: auto;
-	margin-top: 10px;
-	background-color: var(--yellow-strong);
+	background-color: var(--yellow);
 	border: 5px solid var(--orange);
 	border-radius: 5px;
+	padding: 10px 15px;
 }
 summary {
-	background-color: var(--yellow-strong);
+	background-color: var(--yellow);
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		margin: 0;
+	}
+	main {
+		border: none;
+		font-size: 90%;
+	}
+	.cols {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	blockquote {
+		border: none;
+		padding-inline: none;
+		text-align: center;
+	}
 }
