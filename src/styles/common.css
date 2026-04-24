@@ -51,6 +51,11 @@ section {
 	font-size: 18px;
 }
 
+footer {
+	text-align: center;
+	margin: auto;
+}
+
 h1 {
 	font-weight: initial;
 	font-size: 200%;
