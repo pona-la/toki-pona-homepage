@@ -62,18 +62,6 @@ svg {
 	margin: auto;
 }
 
-.cols {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	column-gap: 20px;
-	padding: 10px;
-}
-
-.cols * {
-	justify-self: center;
-	align-self: center;
-}
-
 details {
 	/*max-width: 600px;*/
 	/*margin: auto;*/
@@ -100,11 +88,6 @@ summary {
 		border: none;
 		border-radius: none;
 		font-size: 90%;
-	}
-	.cols {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
 	}
 	blockquote {
 		border: none;

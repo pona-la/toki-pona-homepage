@@ -2,6 +2,7 @@
 import "@/styles/common.css";
 
 import Video from "@/components/Video.astro";
+import Cols from "@/components/Cols.astro";
 import Layout2 from "@/layouts/Layout2.astro";
 import Banner from "@/assets/banner.svg";
 ---
@@ -11,12 +12,17 @@ import Banner from "@/assets/banner.svg";
 	description={"Toki Pona: the language with only 120 words."}
 >
 	<h1>Toki Pona: the language with only 120 words.</h1>
+
 	<Banner />
+
 	<h2>Learn via videos!</h2>
-	<div class='cols'>
-		<blockquote>What is Toki Pona?<br /><b>A quick overview:</b></blockquote>
+
+	<Cols>
+		<blockquote>
+			What is Toki Pona?<br /><b>A quick overview:</b>
+		</blockquote>
 		<Video id='U3GQePblz4M' />
-	</div>
+	</Cols>
 	<details>
 		<summary>Q - What is Toki Pona?</summary>
 		<p>
@@ -33,13 +39,14 @@ import Banner from "@/assets/banner.svg";
 			through daily usage.
 		</p>
 	</details>
-	<div class='cols'>
-		<blockquote style='grid-area: 1 / 2;'>
+
+	<Cols>
+		<blockquote style='grid-area: 1/2'>
 			<b>How can one communicate</b><br />when limited to such a small set of
 			words?<br />Find out now!
 		</blockquote>
 		<Video id='7rVWvwWLUBg' />
-	</div>
+	</Cols>
 	<details>
 		<summary>Q - How does Toki Pona work with only 120 words?</summary>
 		<p>
@@ -55,11 +62,47 @@ import Banner from "@/assets/banner.svg";
 			word. Speakers may also clarify using an additional sentence.
 		</p>
 	</details>
-	<div class='cols'>
+
+	<Cols right>
 		<blockquote>
 			Start learning now!<br />This video contains<br />ALL the grammatical
 			rules.
 		</blockquote>
 		<Video id='5phj5Ae80h8' />
-	</div>
+	</Cols>
+
+	<h2>Read more!</h2>
+
+	<Cols right>
+		<blockquote style='grid-area: 1/2'>
+			Linku, our <b>community dictionary</b> for toki pona words
+		</blockquote>
+		<p></p>
+	</Cols>
+	<details><summary>Click here for alternative dictionaries</summary></details>
+
+	<Cols>
+		<div>
+			<blockquote>
+				Wasona, a <b>complete course</b> available in 14 languages
+			</blockquote>
+		</div>
+		<p></p>
+	</Cols>
+	<details><summary>Click here for alternative courses</summary></details>
+
+	<Cols>
+		<blockquote style='grid-area: 1/2'>
+			An FAQ for Toki Pona written by community members
+		</blockquote>
+		<p></p>
+	</Cols>
+
+	<Cols>
+		<blockquote>
+			sona pona ("good knowledge") is a <b>reliable encyclopedia</b> for toki pona
+			and its history.
+		</blockquote>
+		<p></p>
+	</Cols>
 </Layout2>
