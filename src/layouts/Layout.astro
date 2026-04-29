@@ -15,7 +15,8 @@ const { title, description } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 	<body>
-		<main>
+		<a href="#main" class="skip-link">Skip to content</a>
+		<main id="main">
 			<slot />
 		</main>
 		<footer>
