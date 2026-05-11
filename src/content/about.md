@@ -1,14 +1,12 @@
-## Understanding the Toki Pona Community
+## Understanding the Toki Pona community
 
-Toki Pona is a child of the internet. The culture of the community, from 2001 to today, has reflected that of internet geek culture; before Toki Pona speakers congregated on Discord, they congregated on Telegram and Reddit. Before that, Facebook, forum groups, mailing lists, and IRC. 
+Toki Pona is a child of the internet. Originating in 2001, Toki Pona community norms tend to mirror that of broader internet geek culture. Before Toki Pona speakers congregated on Discord, they congregated on Telegram and Reddit. Before even that, they used Facebook, forum groups, mailing lists, and IRC. 
 
-Throughout these different periods, Toki Pona speakers have continued to **mentor** each other, to **create and share art** with one another, and **nurture the seeds of community** wherever they crop up. 
+Regardless of platform or moment in time, through to the present day, Toki Pona speakers continue to **mentor** each other, to **create and share art** with one another, and **nurture the seeds of community** wherever they crop up. 
 
-In light of this, don't imagine the Toki Pona community to be like a controlled greenhouse tended to by a single gardener-architect who designs its structure and watering schedule. Instead, think of Toki Pona speakers like blossoming wildflowers in the open prairies, free to sprawl and intertwine with each other as they please, subject to no other 'watering schedule' but the whims of the skies above. 
+The Toki Pona community ought not to be viewed like a controlled greenhouse tended to by a single gardener-architect who designs its structure and watering schedule. Instead, think of Toki Pona speakers like wildflowers blossoming on the open prairies, free to sprawl, cluster and intertwine with each other as they please, subject to no other 'watering schedule' but the whims of the skies above. It's a little bit like Wikipedia!
 
-It's a little bit like Wikipedia.
-
-## Is this the official Toki Pona Website?
+## Is this the official Toki Pona website?
 
 Toki Pona's community is decentralized. There is **no single person** that can act on behalf all Toki Pona speakers, and there is **no single group** that can speak for the many autonomous groups that speak Toki Pona.
 
